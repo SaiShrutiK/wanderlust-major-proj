@@ -44,7 +44,11 @@ const listingSchema = new Schema({
             required: true,
             // default: [77.20, 28.61], //shows map on those listings where coordinates aren't saved
         }
-    }
+    },
+    category: {
+        type: String,
+        enum: ["trending", "iconiccities", "mountains", "beaches", "castles", "camping", "cottages", "arctic", "rooms"],
+    },
 });
 
 

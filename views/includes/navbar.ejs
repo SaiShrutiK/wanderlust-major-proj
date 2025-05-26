@@ -7,8 +7,9 @@
     }
   
     .search-btn:hover {
-      background-color: #fe424d;
-      color: #fff;
+      background-color: #fff;
+      color: #fe424d;
+      transition: 0.3s ease-in-out;
     }
   
     .search-btn i {
@@ -40,12 +41,18 @@
       margin-left: 8rem;
     }
 
+    .fa-compass:hover  {
+      transform: rotate(45deg);
+      transition: 0.2s ease;
+    }
+
   </style>
   
   <nav class="navbar navbar-expand-md bg-body-light border-bottom shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand" href="/listings">
-        <i class="fa-regular fa-compass"></i> &nbsp; &nbsp; Explore
+        <i class="fa-regular fa-compass"></i> &nbsp; &nbsp; 
+        <b>Explore Wanderlust</b>
       </a>
       <button
         class="navbar-toggler"
@@ -57,18 +64,20 @@
       </button>
   
       <div class="collapse navbar-collapse search-div" id="navbarNavAltMarkup">
-        <form class="d-flex mx-auto my-2" role="search">
+        <form class="d-flex mx-auto my-2" role="search" action="/listings">
           <input
             class="form-control me-2 search-inp"
             type="search"
             placeholder="Search destinations"
+            name="search" 
+            autocomplete="off"
           />
           <button class="btn search-btn" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i> Search
           </button>
         </form>
         <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <a class="nav-link" href="/listings/new">Host your Home</a>
           <% if (!currUser) { %>
             <a class="nav-link" href="/login"><b>Log in</b></a>
             <a class="nav-link" href="/signup"><b>Sign up</b></a>

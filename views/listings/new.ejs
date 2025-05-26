@@ -29,6 +29,29 @@
         </div>
 
         <div class="mb-3">
+            <label for="category" class="form-label">Select Category</label>
+            <select 
+                class="form-select" 
+                aria-label="Default select example"
+                name="listing[category]"
+                id="category"
+                required
+            >
+                <option value="" hidden>Select an option</option>
+                <option value="trending">Trending</option>
+                <option value="iconiccities">Iconic Cities</option>
+                <option value="mountains">Mountains</option>
+                <option value="beaches">Beaches</option>
+                <option value="castles">Castles</option>
+                <option value="camping">Camping</option>
+                <option value="cottages">Cottages</option>
+                <option value="arctic">Arctic</option>
+                <option value="rooms">Rooms</option>
+            </select>
+            <div class="invalid-feedback">Category is required</div>
+        </div>
+
+        <div class="mb-3">
             <label for="image" class="form-label">Upload Listing Image</label>
             <input 
                 name="listing[image]" 
